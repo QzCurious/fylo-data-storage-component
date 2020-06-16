@@ -1,0 +1,82 @@
+.usage {
+  display: grid;
+  grid-row-gap: 1em;
+  grid-template-areas:
+    "desc desc desc"
+    "progress progress progress"
+    "min left max";
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  margin: 0 0 2em 0;
+  padding: 1.6rem 1.6rem 0 1.6rem;
+  border-radius: 1rem;
+  background: var(--dark-blue);
+  justify-items: center;
+}
+
+.usage__desc {
+  grid-area: desc;
+}
+
+.usage__progress {
+  grid-area: progress;
+}
+
+.usage__min {
+  grid-area: min;
+  justify-self: left;
+}
+
+.usage__max {
+  grid-area: max;
+  justify-self: right;
+}
+
+.usage__left {
+  display: flex;
+  grid-area: left;
+  grid-column: 1 / -1;
+  align-items: center;
+  padding: 1em;
+  transform: translateY(2em);
+  border-radius: 1em;
+  background-color: var(--white);
+  color: var(--very-dark-blue);
+  text-align: end;
+}
+
+.usage__left__amount {
+  font-size: 2.2em;
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+.usage__left__unit {
+  color: var(--grayish-blue);
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+@media only screen and (min-width: 376px) {
+  .usage {
+    grid-template-areas:
+      "desc desc left"
+      "progress progress progress"
+      "min . max";
+    margin: 2em 0 0 0;
+    padding: 0 1.6rem 1.6rem 1.6rem;
+  }
+
+  .usage__left {
+    grid-column: left;
+    align-self: start;
+    transform: translateY(-2em);
+    font-size: max(1vw, 0.75em);
+    justify-self: start;
+  }
+
+  .usage__desc {
+    align-self: center;
+    justify-self: start;
+  }
+}

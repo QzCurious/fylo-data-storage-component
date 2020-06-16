@@ -1,0 +1,34 @@
+.progress {
+  --progress: 81.5%;
+  display: flex;
+  position: relative;
+  align-items: center;
+
+  width: 100%;
+  height: 1em;
+  padding: 0 0.1em;
+  border-radius: 9999px;
+  background-color: var(--very-dark-blue);
+  font-size: 1.4em;
+}
+
+.progress__meter {
+  content: '';
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: var(--progress);
+  min-width: 0.8em;
+  height: 0.8em;
+  padding: 0 0.05em;
+  border-radius: inherit;
+  background-image: var(--gradient);
+}
+
+.progress__meter::after {
+  content: '';
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 9999px;
+  background-color: var(--white);
+}

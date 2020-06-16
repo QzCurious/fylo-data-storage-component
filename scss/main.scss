@@ -1,0 +1,28 @@
+@use "_reset.scss";
+@use "_layouts.scss";
+@use "_utilities.scss";
+@use "_components/_btn.scss";
+@use "_components/_progress.scss";
+@use "_components/_panel.scss";
+@use "_components/_usage.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+:root {
+  --white: #fff;
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --very-dark-blue: hsl(229, 57%, 11%);
+  --gradient: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+
+  --normal-font: 400;
+  --bold-font: 700;
+  font-family: 'Raleway', sans-serif;
+
+  font-size: 14px;
+}
+
+body {
+  color: var(--white);
+}

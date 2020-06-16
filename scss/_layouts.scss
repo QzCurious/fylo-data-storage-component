@@ -1,0 +1,36 @@
+.main-layout {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-areas:
+    "head"
+    "body";
+  grid-template-rows: min-content min-content;
+  align-content: center;
+  max-width: 42rem;
+  min-height: 100vh;
+  padding: 0 2rem;
+  background: url("/images/bg-mobile.svg") no-repeat;
+  background-size: cover;
+}
+
+.main-layout__head {
+  grid-area: head;
+}
+
+.main-layout__body {
+  grid-area: body;
+}
+
+@media only screen and (min-width: 376px) {
+  .main-layout{
+    grid-template-areas:
+      ". head body .";
+    grid-template-columns: 1fr 1fr 1.5fr 1fr;
+    grid-template-rows: auto;
+    max-width: none;
+    background-color: var(--very-dark-blue);
+    background-image: url("/images/bg-desktop.svg");
+    background-position: right bottom;
+    background-size: contain;
+  }
+}

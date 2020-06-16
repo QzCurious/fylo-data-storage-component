@@ -1,0 +1,27 @@
+.panel {
+  padding: 2.6rem;
+  border-radius: 1rem 5rem 1rem 1rem;
+  background: var(--dark-blue);
+}
+
+.panel__link {
+  width: 3.6em;
+  height: 3.6em;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--very-dark-blue);
+  text-align: center;
+  cursor: pointer;
+}
+
+.panel__link-group {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, 3.6em);
+  margin-top: 1.4rem;
+  padding: 0.6rem 0;
+}
+
+.panel__img {
+  display: block;
+}
