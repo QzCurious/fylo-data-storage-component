@@ -4,13 +4,10 @@
   grid-template-areas:
     "head"
     "body";
+  grid-template-columns: auto;
   grid-template-rows: min-content min-content;
-  align-content: center;
-  max-width: 42rem;
-  min-height: 100vh;
+  align-items: center;
   padding: 0 2rem;
-  background: url("/images/bg-mobile.svg") no-repeat;
-  background-size: cover;
 }
 
 .main-layout__head {
@@ -25,12 +22,14 @@
   .main-layout{
     grid-template-areas:
       ". head body .";
-    grid-template-columns: 1fr 1fr 1.5fr 1fr;
+    grid-template-columns: 1fr auto auto 1fr;
     grid-template-rows: auto;
-    max-width: none;
-    background-color: var(--very-dark-blue);
-    background-image: url("/images/bg-desktop.svg");
-    background-position: right bottom;
-    background-size: contain;
   }
+}
+
+.f-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }

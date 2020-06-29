@@ -6,7 +6,7 @@
     "progress progress progress"
     "min left max";
   grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(3, min-content);
   margin: 0 0 2em 0;
   padding: 1.6rem 1.6rem 0 1.6rem;
   border-radius: 1rem;
@@ -37,7 +37,7 @@
   grid-area: left;
   grid-column: 1 / -1;
   align-items: center;
-  padding: 1em;
+  padding: 0.8em 1.2em;
   transform: translateY(2em);
   border-radius: 1em;
   background-color: var(--white);
@@ -68,15 +68,29 @@
   }
 
   .usage__left {
+    margin-left: 1rem;
+    position: relative;
     grid-column: left;
     align-self: start;
     transform: translateY(-2em);
-    font-size: max(1vw, 0.75em);
+    border-bottom-right-radius: 0;
     justify-self: start;
   }
 
+  .usage__left::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-width: 1em;
+    border-style: solid;
+    border-color: #fff #fff transparent transparent;
+  }
+
   .usage__desc {
-    align-self: center;
+    align-self: end;
     justify-self: start;
   }
 }
